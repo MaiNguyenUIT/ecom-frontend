@@ -4,10 +4,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import LogoutIcon from '@mui/icons-material/Logout';
 import PersonIcon from '@mui/icons-material/Person';
 const Header = () => {
-    const newLocal = <a href="/cart" className="hover:text-gray-300 relative inline-block">
-        <ShoppingCartIcon className="w-6 h-6" />
-        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">5</span>
-    </a>;
   return (
     <div className="w-full">
  
@@ -16,8 +12,10 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center">
           <span className="text-xl md:text-2xl font-bold">
+            <a href="/">
             <span className="text-white">ECom</span>
             <span className="text-orange-500">UIT</span>
+            </a>
           </span>
         </div>
         
@@ -44,7 +42,10 @@ const Header = () => {
             <span className="ml-2">Đơn hàng</span>
           </a>
           <a href="/wishlist" className="hover:text-gray-300"><FavoriteIcon/></a>
-          {newLocal}
+          <a href="/cart" className="hover:text-gray-300 relative inline-block">
+        <ShoppingCartIcon className="w-6 h-6" />
+        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">5</span>
+    </a>
           <a href="/logout" className="flex items-center hover:text-gray-300">
             {/* <LogOut className="w-4 h-4 md:w-5 md:h-5 mr-1" /> */}
             <LogoutIcon/>
